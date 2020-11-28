@@ -2,11 +2,6 @@ import * as react from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
 
-const Label = styled.label`
-  font-weight: 500;
-  display: block;
-`;
-
 const Input = styled.input`
   &:focus + label,
   &:not([value='']):not(:focus) + label {
@@ -26,10 +21,10 @@ function App() {
           : 'React'}
       </h1>
       <Input value={inputVal} onChange={(e) => setInputVal(e.target.value)} />
-      <Label>
+      <label>
         Background should only be red when focused or when value is not an empty
         string.
-      </Label>
+      </label>
     </div>
   );
 }
